@@ -5,8 +5,11 @@
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
     "react-scripts": "2.0.5",
     "react-transition-group": "^2.5.0",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.5",
     "styled-components": "^4.0.2"
   },
   "scripts": {
@@ -23,5 +26,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.5"
+  }
 }
