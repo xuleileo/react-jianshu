@@ -59,6 +59,18 @@ export const SearchWrapper = styled.div`
             color: #fff;
         }
     }
+    .slide-enter {
+        transition: all .2s ease-out;
+    }
+    .slide-enter-active {
+        width:220px;
+    }
+    .slide-exit {
+        transition: all .2s ease-out;
+    }
+    .slide-exit-active {
+        width:160px;
+    }
 `
 
 export const NavSearch = styled.input.attrs({
