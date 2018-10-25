@@ -19,7 +19,7 @@ export default (state = defaultState , action) => {
             // 一次改变多个值
             return state.merge({
                 list: action.data,
-                totalPage: action.totalPate
+                totalPage: action.totalPage
             })
             // 一次改变一个值
             // return state.set('list',action.data).set('totalPage',action.totalPage);
