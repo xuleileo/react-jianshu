@@ -1,4 +1,4 @@
-import React, { Component,Fragment } from 'react';
+import React, { PureComponent,Fragment } from 'react';
 import Header from './common/header';
 import Globalstyle from './style';
 import IconFontstyle from './statics/iconfont/iconfont'
@@ -8,7 +8,7 @@ import Home from './pages/home';
 import Detail from './pages/detail';
 import store from './store';
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     return (
       <Fragment>
@@ -16,9 +16,9 @@ class App extends Component {
         <IconFontstyle />
         <Provider store={store}>
           <Fragment>
-            <Header></Header>
             <BrowserRouter>
               <Fragment>
+                <Header></Header>
                 <Route path='/' exact component = {Home}></Route>
                 <Route path='/detail' exact component = {Detail}></Route>
               </Fragment>
