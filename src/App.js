@@ -9,6 +9,7 @@ import Detail from './pages/detail';
 import store from './store';
 
 class App extends PureComponent {
+
   render() {
     return (
       <Fragment>
@@ -20,7 +21,7 @@ class App extends PureComponent {
               <Fragment>
                 <Header></Header>
                 <Route path='/' exact component = {Home}></Route>
-                <Route path='/detail' exact component = {Detail}></Route>
+                <Route path='/detail/:id' exact component = {Detail}></Route>
               </Fragment>
             </BrowserRouter>
           </Fragment>
