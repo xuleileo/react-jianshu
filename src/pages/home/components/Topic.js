@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
 import { 
     TopicWrapper,
     TopicItem,
@@ -6,37 +7,19 @@ import {
 } from '../style';
 
 class Topic extends Component {
+
     render() {
+        const { list } = this.props;
         return (
             <TopicWrapper>
-                <TopicItem>
-                    <img alt='' className='topic_pic' src="//upload.jianshu.io/collections/images/76/12.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"></img>
-                    社会热点
-                </TopicItem>
-                <TopicItem>
-                    <img alt='' className='topic_pic' src="//upload.jianshu.io/collections/images/76/12.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"></img>
-                    社会热点
-                </TopicItem>
-                <TopicItem>
-                    <img alt='' className='topic_pic' src="//upload.jianshu.io/collections/images/76/12.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"></img>
-                    社会热点
-                </TopicItem>
-                <TopicItem>
-                    <img alt='' className='topic_pic' src="//upload.jianshu.io/collections/images/76/12.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"></img>
-                    社会热点
-                </TopicItem>
-                <TopicItem>
-                    <img alt='' className='topic_pic' src="//upload.jianshu.io/collections/images/76/12.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"></img>
-                    社会热点
-                </TopicItem>
-                <TopicItem>
-                    <img alt='' className='topic_pic' src="//upload.jianshu.io/collections/images/76/12.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"></img>
-                    社会热点
-                </TopicItem>
-                <TopicItem>
-                    <img alt='' className='topic_pic' src="//upload.jianshu.io/collections/images/76/12.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"></img>
-                    社会热点
-                </TopicItem>
+                {
+                    list.map((item) => (
+                        <TopicItem key={item.get('id')}>
+                            <img alt='' className='topic_pic' src={item.get('imgUrl')}></img>
+                            {item.get('title')}
+                        </TopicItem>            
+                    ))
+                }
                 <TopicMore>更多热门专题 > </TopicMore>
 
 
@@ -45,4 +28,10 @@ class Topic extends Component {
     }
 }
 
-export default Topic;
+// 从store里面拿数据
+const mapStateToProps = (state) => ({
+    list: state.getIn(['home','topicList'])
+})
+
+
+export default connect(mapStateToProps,null)(Topic);
