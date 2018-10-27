@@ -23,7 +23,7 @@ class Home extends PureComponent {
         return (
             <HomeWrapper>
                 <Homeleft>
-                    <img alt='' className='banner-img' src='http://upload.jianshu.io/admin_banners/web_images/4514/bf753d6adbb8da040052b46492f41432d9eb1a0f.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540'></img>
+                    <img alt='' className='banner-img' src='./images/banner_01.jpg'></img>
                     <Topic></Topic>
                     <List></List>
                 </Homeleft>
