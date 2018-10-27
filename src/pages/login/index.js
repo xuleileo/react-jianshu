@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { 
     LoginWrapper,
     LoginBox,
@@ -16,7 +17,7 @@ class Login extends PureComponent {
             return (
                 <LoginWrapper>
                     <LoginBox>
-                        <Input placeholder='账号' ref={(input) => {this.account = input}}/>
+                        <Input placeholder='账号或手机号' ref={(input) => {this.account = input}}/>
                         <Input placeholder='密码' type='password' ref={(input) => {this.password = input}}/>
                         <Button onClick={() => this.props.login(this.account,this.password)}>登录</Button>
                     </LoginBox>
@@ -38,4 +39,4 @@ const mapDispatchToProps = (dispatch) => ({
         dispatch(actionCreators.login(accountElement.value,passwordElement.value));
     }
 })
-export default connect(mapStateToProps,mapDispatchToProps)(Login);
+export default connect(mapStateToProps,mapDispatchToProps)(withRouter(Login));

@@ -67,8 +67,12 @@ class Header extends PureComponent{
                     <Logo />
                 </Link>
                 <Nav>
-                    <NavItem className='left active' >首页</NavItem>
-                    <NavItem className='left' >下载APP</NavItem>
+                    <Link to='/'>
+                        <NavItem className='left active' >首页</NavItem>
+                    </Link>
+                    <Link to='/qrcode'>
+                        <NavItem className='left' >下载APP</NavItem>
+                    </Link>
                     {
                         login ? 
                         <NavItem onClick={logout} className='right' >退出</NavItem> : 

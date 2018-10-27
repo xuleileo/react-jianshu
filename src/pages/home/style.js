@@ -32,7 +32,11 @@ export const BackTop = styled.div`
     line-height: 60px;
     text-align: center;
     border: 1px solid #ccc;
-    font-size: 14px;    
+    font-size: 14px;
+    border-radius: 3px;
+    :hover {
+        background: #f7f7f7;
+    }
 `
 
 export const TopicWrapper = styled.div`
@@ -124,6 +128,7 @@ export const RecommendWrapper = styled.div`
 export const RecommendItem = styled.div`
     width: 280px;
     height: 50px;
+    margin-bottom: 6px;
     cursor: pointer;
     background: url(${(props) => props.imgUrl});
     background-size: contain;
@@ -133,7 +138,13 @@ export const WriterWrapper = styled.div`
     width: 270px;
     border: 1px solid #dcdcdc;
     border-radius: 3px;
-    height: 300px;
+    height: 270px;
     line-height: 300px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .qrcode {
+        width: 250px;
+        height: 250px;
+    }
 `

@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import Topic from './components/Topic';
 import List from './components/List';
 import Recommend from './components/Recommend';
@@ -22,7 +23,7 @@ class Home extends PureComponent {
         return (
             <HomeWrapper>
                 <Homeleft>
-                    <img alt='' className='banner-img' src='//upload.jianshu.io/admin_banners/web_images/4486/41d9173c44ce6eded75da5f82da659973ddaad41.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540'></img>
+                    <img alt='' className='banner-img' src='http://upload.jianshu.io/admin_banners/web_images/4514/bf753d6adbb8da040052b46492f41432d9eb1a0f.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540'></img>
                     <Topic></Topic>
                     <List></List>
                 </Homeleft>
@@ -31,7 +32,7 @@ class Home extends PureComponent {
                     <Writer></Writer>
                 </HomeRight>
                 {
-                    this.props.showScroll ? <BackTop onClick={this.handleScrollTop}>回到顶部</BackTop> : null
+                    this.props.showScroll ? <BackTop onClick={this.handleScrollTop}><i className='iconfont a'>&#xe65d;</i></BackTop> : null
                 }
                 
             </HomeWrapper>
@@ -65,4 +66,4 @@ const mapDispatchToProps = (dispatch) =>({
     }
 })
 
-export default connect(mapStateToProps,mapDispatchToProps)(Home);
+export default connect(mapStateToProps,mapDispatchToProps)(withRouter(Home));

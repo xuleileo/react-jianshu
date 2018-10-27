@@ -29,7 +29,7 @@ class List extends PureComponent {
                     })
                 }
                 <LoadMore onClick={() => getMoreList(articlePage)}>
-                    更多文字
+                    阅读更多
                 </LoadMore>
             </Fragment>
             
