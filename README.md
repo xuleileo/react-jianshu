@@ -3,21 +3,21 @@
 
 ## Technology stack
 
-axios@0.18.0 + 
-immutable@3.8.2 + 
-react@16.5.2 + 
-react-dom@16.5.2 + 
-react-loadable@5.5.0 + 
-react-redux@5.0.7 + 
-react-router@4.3.1 + 
-react-router-dom@4.3.1 + 
-react-scripts@.0.5 + 
-react-transition-group@2.5.0 + 
-redux@4.0.1 + 
-redux-devtools-extension@2.13.5 + 
-redux-immutable@4.0.0 + 
-redux-thunk@2.3.0 + 
-styled-components@4.0. 
+- axios@0.18.0 + 
+- immutable@3.8.2 + 
+- react@16.5.2 + 
+- react-dom@16.5.2 + 
+- react-loadable@5.5.0 + 
+- react-redux@5.0.7 + 
+- react-router@4.3.1 + 
+- react-router-dom@4.3.1 + 
+- react-scripts@.0.5 + 
+- react-transition-group@2.5.0 + 
+- redux@4.0.1 + 
+- redux-devtools-extension@2.13.5 + 
+- redux-immutable@4.0.0 + 
+- redux-thunk@2.3.0 + 
+- styled-components@4.0. 
 
 
 
