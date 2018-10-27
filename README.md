@@ -11,7 +11,7 @@ react@16.5.2 + redux@4.0.1 + react-redux@5.0.7 + react-router@4.3.1 + axios@0.18
 
 
 ```
-git clone https://github.com/xuleileo/react-jianshu
+git clone https://github.com/xuleileo/react-jianshu.git
 
 cd react-jianshu
 
@@ -21,7 +21,7 @@ npm run start
 ```
 if you want to publish your app, use the following line of commands
 ```
-npm run build (打包，部署)
+npm run build 
 ```
 
 ## Reatures list
@@ -50,7 +50,7 @@ react@16.5.2 + redux@4.0.1 + react-redux@5.0.7 + react-router@4.3.1 + axios@0.18
 
 
 ```
-git clone https://github.com/xuleileo/react-jianshu
+git clone https://github.com/xuleileo/react-jianshu.git
 
 cd react-jianshu
 
