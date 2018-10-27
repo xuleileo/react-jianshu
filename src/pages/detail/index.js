@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { actionCreators } from './store'
 import {
     DetailWrapper,
@@ -8,6 +9,7 @@ import {
 } from './style';
 
 class Detail extends PureComponent {
+
     render() {
         const { title, content } = this.props;
         return (
@@ -17,9 +19,11 @@ class Detail extends PureComponent {
             </DetailWrapper>
         )
     }
+
     componentDidMount() {
         this.props.getDetail(this.props.match.params.id);
     }
+
 }
 
 const mapStateToProps = (state) => ({
@@ -32,4 +36,5 @@ const mapDispatchToProps = (dispatch) => ({
         dispatch(actionCreators.getDetail(id))
     }
 })
-export default connect(mapStateToProps,mapDispatchToProps)(Detail);
+
+export default connect(mapStateToProps,mapDispatchToProps)(withRouter(Detail));
