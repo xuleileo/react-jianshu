@@ -35,3 +35,9 @@ npm run build (打包，部署)
 - [√] axios异步请求接口
 - [√] /public/api/下载json文件，模拟后端返回接口
 - [√] redux完整示范
+
+
+
+
+
+
