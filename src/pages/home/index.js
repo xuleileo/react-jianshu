@@ -5,7 +5,7 @@ import Topic from './components/Topic';
 import List from './components/List';
 import Recommend from './components/Recommend';
 import Writer from './components/Writer';
-import { actionCreator } from './store';
+import { actionCreators } from './store';
 import { 
     HomeWrapper,
     Homeleft,
@@ -58,11 +58,11 @@ const mapStateToProps = (state) => ({
 })
 const mapDispatchToProps = (dispatch) =>({
     changeHomeData(){
-        const action = actionCreator.getHomeInfo();
+        const action = actionCreators.getHomeInfo();
         dispatch(action);
     },
     changeScrollTopShow(e){
-        document.documentElement.scrollTop > 400 ? dispatch(actionCreator.toggleTopShow(true)) : dispatch(actionCreator.toggleTopShow(false));
+        document.documentElement.scrollTop > 400 ? dispatch(actionCreators.toggleTopShow(true)) : dispatch(actionCreators.toggleTopShow(false));
     }
 })
 

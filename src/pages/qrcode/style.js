@@ -12,7 +12,7 @@ export const QrcodeWrapper = styled.div`
         border: 1px solid #666;
         box-shadow: -5px 10px 2px #88888888;
     }
-    .desc{
+    .slogan{
         display: block;
         line-height: 50px;
         font-size: 25px;

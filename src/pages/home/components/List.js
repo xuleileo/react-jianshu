@@ -5,7 +5,7 @@ import {
     LoadMore
 } from '../style';
 import { connect } from 'react-redux';
-import { actionCreator } from '../store';
+import { actionCreators } from '../store';
 import { Link } from 'react-router-dom';
 
 class List extends PureComponent {
@@ -44,7 +44,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) =>({
     getMoreList(articlePage){
-        dispatch(actionCreator.getMoreList(articlePage));
+        dispatch(actionCreators.getMoreList(articlePage));
     }
 })
 

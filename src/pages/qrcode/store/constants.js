@@ -1,0 +1,1 @@
+export const CHANGE_QRCODE_DATA = 'qrcode/change_qrcode_data';
